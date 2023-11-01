@@ -1,8 +1,9 @@
-let name = "nicollas"
+let nome = "nicollas"
 
-console.log(name)
-console.error(name)
-console.warn(name)
+console.log(nome)
+console.error(nome)
+console.warn(nome)
 
-//window.alert(name)
-window.prompt("Insiráo seu nome:")
+// window.alert(nome)
+// nome = window.prompt("Insira o seu nome: ")
+// let confirmacao = window.confirm("Confirma essa ação ?")
