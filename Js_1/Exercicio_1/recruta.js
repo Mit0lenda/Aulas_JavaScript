@@ -7,5 +7,5 @@ alert(
     "Recruta Cadastrado com sucessor!\n" +
     "\nNome completo: "+ primeironome + " " + sobrenome +
     "\nCampo de estudo: " + estudo +
-    "\nIdade: " + (2023 - ano)
+    "\nIdade: " + (2024 - ano)
 )
