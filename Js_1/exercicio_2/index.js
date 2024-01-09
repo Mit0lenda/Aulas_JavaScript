@@ -1,17 +1,14 @@
 const nome1 = prompt ("veiculo 1: ")
 const nome2 = prompt ("veiculo 2: ")
-const vel1 = prompt ("velocidade do veiculo 1: ")
-const vel2 = prompt ("velocidade do veiculo 2: ")
+const vel1 = parseFloat(prompt ("velocidade do veiculo 1: "))
+const vel2 = parseFloat(prompt ("velocidade do veiculo 2: "))
 
-const x = parseFloat(vel1)
-const y = parseFloat(vel2)
-
-    if (x > y)
+    if (vel1 > vel2)
     {
         alert("O veiculo "+nome1+" venceu")
     }
     else{
-        if (y > x)
+        if (vel2 > vel1)
         {
             alert("O veiculo "+nome2+" venceu")
         }
