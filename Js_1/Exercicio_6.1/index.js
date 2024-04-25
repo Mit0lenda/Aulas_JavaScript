@@ -10,3 +10,4 @@ if(palavra === palavrainvertida){
 else{
     alert(palavra + " não é um palíndromo!\n\n" + palavra + " !== " + palavrainvertida)
 }
+    
