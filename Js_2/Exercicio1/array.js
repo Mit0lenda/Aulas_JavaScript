@@ -1,38 +1,34 @@
-let escolha = ""
-let fila = []
-do
-{
-    let pacientes = ""
-    for(let i = 0 ; i < FileReader.length; i++)
-    {
-        pacientes += (i + 1) + "º - " + fila[i] + "\n"
-    }
-    escolha = prompt (
-        "Pacientes:\n" + pacientes + "\nEscolha uma acao: " +
-        "\n1 - Novo paciente \n2 -Consultar paciente \n3 - Sair"
-    )
-    switch(escolha)
-    {
-        case "1":
-            const novoPaciente = prompt("Qual o nome do paciente?")
-            fila.push(novoPaciente)
-            break
-        case "2":
-            const pacienteConsulta = fila.shift()
-            if(!pacienteConsulta)
-            {
-                alert("Nao ha pacientes na fila!")
-            }
-            else {
-                alert (pacienteConsulta + "foi removido da fila.")
-            }
-            break
-        case "3":
-            alert("Encerrando...")
-            break
-            default:
-            alert("Opcao invalida!")
-            break
-    }
-}
-while(escolha !== "3"){}
+let fila = [];
+let opcao = "";
+
+do {
+  let pacientes = "";
+  for (let i = 0; i < fila.length; i++) {
+    pacientes += i + 1 + "º - " + fila[i] + "\n";
+  }
+
+  opcao = prompt(
+    "Pacientes:\n" + pacientes + "\nEscolha uma ação:\n1 - Novo paciente\n2 - Consultar paciente\n3 - Sair"
+  );
+
+  switch (opcao) {
+    case "1":
+      const novoPaciente = prompt("Qual é o nome do paciente?");
+      fila.push(novoPaciente);
+      break;
+    case "2":
+      const pacienteConsultado = fila.shift();
+      if (!pacienteConsultado) {
+        alert("Não há pacientes na fila!");
+      } else {
+        alert(pacienteConsultado + " foi removido da fila.");
+      }
+      break;
+    case "3":
+      alert("Encerrando...");
+      break;
+    default:
+      alert("Opção inválida!");
+      break;
+  }
+} while (opcao !== "3");
