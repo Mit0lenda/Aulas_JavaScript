@@ -49,4 +49,4 @@ console.log(sobrenome)
 var nome = "Nicollas"
 let sobrenome = "Freitas"
 console.log(nome)
-confirm.log(sobrenome)
+confirm.log(sobrenome6546)
