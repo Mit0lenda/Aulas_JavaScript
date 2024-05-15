@@ -1,26 +1,26 @@
 let option = ""
+const vacancies = []
 function menu (){
     return prompt("Job Vacancy System:\n1)List of available vacancies\n2)Create a new vacancy\n3)View job vacancy\n4)Register a candidate for a job opening\n5)Delete a job vacancy \n6)Exit")
 }
 function execute(){
-    do{
-        let result 
+    do{ 
         option = menu()
         switch(option){
             case "1":
-                result =List()
+                List()
                 break;
             case "2":
-                result = CreateNew()
+                CreateNew()
                 break;
             case "3":
-                result = ViewJob()
+                ViewJob()
                 break;
             case "4":
-                result = RegisterCandidate()
+                RegisterCandidate()
                 break;
             case "5":
-                result = DeleteJob()
+                DeleteJob()
                 break;
             case "6":
                 alert("Leaving...")
@@ -36,9 +36,25 @@ function List(){
 
 }
 function CreateNew(){
-
+const NewVacancy = {}
+NewVacancy.name =prompt("\nWhat is the name of the vacancy ?")
+NewVacancy.description =prompt("\nWhat is the description ?")
+NewVacancy.deadline = prompt("\nWhat is the deadline ?")
+const confirm = prompt("Save this options ?\n"
++ ("\nName of the vacancy: ") + NewVacancy.name 
++ ("\nThe Description: ") + NewVacancy.description
++ ("\nThe Deadline: ") + NewVacancy.deadline
+)
+if(confirm === "yes" || confirm ==="Yes"){
+    return vacancies.push(NewVacancy)
+}
+else{
+    alert("Returning to the menu!")
+    return
+}
 }
 function ViewJob(){
+
 
 }
 function RegisterCandidate(){
@@ -47,3 +63,5 @@ function RegisterCandidate(){
 function DeleteJob(){
 
 }
+execute()
+console.log(vacancies)
