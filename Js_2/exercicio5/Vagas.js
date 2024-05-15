@@ -1,9 +1,9 @@
-let option = ""
 const vacancies = []
 function menu (){
-    return prompt("Job Vacancy System:\n1)List of available vacancies\n2)Create a new vacancy\n3)View job vacancy\n4)Register a candidate for a job opening\n5)Delete a job vacancy \n6)Exit")
-}
+    const option = prompt("Job Vacancy System:\n1)List of available vacancies\n2)Create a new vacancy\n3)View job vacancy\n4)Register a candidate for a job opening\n5)Delete a job vacancy \n6)Exit")
+    return option }
 function execute(){
+    let option = ""
     do{ 
         option = menu()
         switch(option){
@@ -54,11 +54,11 @@ const confirma = confirm("Save this options ?\n"
 + ("\nThe Deadline: ") + NewVacancy.deadline
 )
 if(confirma){
-    return vacancies.push(NewVacancy)
+     vacancies.push(NewVacancy)
 }
 else{
     alert("Returning to the menu!")
-    return
+    
 }
 }
 function ViewJob() {
@@ -79,6 +79,7 @@ function ViewJob() {
 }
 function RegisterCandidate(){
 const index=parseInt(prompt("what is the vacantion rate?")) -1
+if(index >= 0 && index < vacancies.length){
 const candidateName = prompt("What's your name ? ")
 vacancies[index].nameCandidates.push(candidateName)
 vacancies[index].candidates++
@@ -88,12 +89,16 @@ const confirma = confirm("Is this vacancy ?\n"
     +"\nThe Deadline: " + vacancies[index].deadline
 )
 if(confirma){
-    return vacancies.nameCandidates
+    vacancies.nameCandidates
 } 
 else
 {
     alert("Returning to the menu!")
-    return
+    
+}
+}
+else{
+    alert("Returning to the menu!")
 }
 }
 function DeleteJob(){
