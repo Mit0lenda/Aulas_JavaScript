@@ -33,19 +33,27 @@ function execute(){
     while(option !== "6")
 }
 function List(){
-
+    let tableContent = "Vacancy    |   Name    |   Number of Candidates\n"
+for(let i = 0 ; i < vacancies.length ; i++){
+    tableContent += ( i + 1) + "               |   " +
+    vacancies[i].name + "        |   " +
+    vacancies[i].nameCandidates.length + "\n"
+}
+alert(tableContent)
 }
 function CreateNew(){
 const NewVacancy = {}
+NewVacancy.nameCandidates = []
 NewVacancy.name =prompt("\nWhat is the name of the vacancy ?")
 NewVacancy.description =prompt("\nWhat is the description ?")
-NewVacancy.deadline = prompt("\nWhat is the deadline ?")
-const confirm = prompt("Save this options ?\n"
+NewVacancy.deadline = parseFloat(prompt("\nWhat is the deadline ?"))
+NewVacancy.candidates = 0
+const confirma = confirm("Save this options ?\n"
 + ("\nName of the vacancy: ") + NewVacancy.name 
 + ("\nThe Description: ") + NewVacancy.description
 + ("\nThe Deadline: ") + NewVacancy.deadline
 )
-if(confirm === "yes" || confirm ==="Yes"){
+if(confirma){
     return vacancies.push(NewVacancy)
 }
 else{
@@ -53,15 +61,66 @@ else{
     return
 }
 }
-function ViewJob(){
-
-
+function ViewJob() {
+    const index = parseInt(prompt("Give me index: ")) - 1
+    const inde = index
+    if (index >= 0 && index < vacancies.length) {
+        alert(
+            "\nIndex: " + (inde + 1) +
+            "\nName of the vacancy: " + vacancies[index].name +
+            "\nThe Description: " + vacancies[index].description +
+            "\nThe Deadline: " + vacancies[index].deadline +
+            "\nNumber of Candidates: " + vacancies[index].candidates +
+            "\nName of Candidates: " + vacancies[index].nameCandidates
+        )
+    } else {
+        alert("Invalid index. Please try again.")
+    }
 }
 function RegisterCandidate(){
-
+const index=parseInt(prompt("what is the vacantion rate?")) -1
+const candidateName = prompt("What's your name ? ")
+vacancies[index].nameCandidates.push(candidateName)
+vacancies[index].candidates++
+const confirma = confirm("Is this vacancy ?\n"
+    +"\nName of the vacancy: " + vacancies[index].name
+    +"\nThe Description: " + vacancies[index].description
+    +"\nThe Deadline: " + vacancies[index].deadline
+)
+if(confirma){
+    return vacancies.nameCandidates
+} 
+else
+{
+    alert("Returning to the menu!")
+    return
+}
 }
 function DeleteJob(){
-
+    const index=parseInt(prompt("what is the vacantion rate?")) -1
+    const inde = index
+    if(index >= 0 && index < vacancies.length){
+        const confirma = confirm("Are you sure?\n" +
+        "\nIndex: " + (inde + 1) +
+        "\nName of the vacancy: " + vacancies[index].name +
+        "\nThe Description: " + vacancies[index].description +
+        "\nThe Deadline: " + vacancies[index].deadline +
+        "\nNumber of Candidates: " + vacancies[index].candidates
+    )
+    if(confirma){
+        vacancies.splice(index,1)
+        for(let i = 0; i < vacancies.length;i++){
+           vacancies[i].index = i + 1 
+        }
+        alert("Vacancy deleted successfully!")
+    }
+    else{
+        alert("Returning to the menu!")
+        return
+    }}
+    else{
+        alert("Invalid index.Please try again!")
+    }
 }
 execute()
 console.log(vacancies)
