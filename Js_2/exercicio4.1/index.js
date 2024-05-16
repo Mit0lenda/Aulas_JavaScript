@@ -1,14 +1,13 @@
 let name = prompt("Whats is name of the ship ?");
-let shipVelocity = 0;
-let Chosenoption;
+let shipVelocity = 0
 function menu(name) {
   const option = prompt(
     "Welcome to ship control " +  name +"\n1)Accelerate the ship by 5km/s\n2)Slow down by 5km/s\n3)Print on-board data\n4)Leaving the program..."
-  );
-  return option;
+  )
+  return option
 }
 function execute(name) {
-  let option = "";
+  let option = ""
   do {
     option = menu(name);
     switch (option) {
@@ -28,7 +27,7 @@ function execute(name) {
         alert("Invalid Option!");
         break;
     }
-  } while (option !== "4");
+  } while (option !== "4")
 }
 function speedUp(Accelerate,name){
     alert("The " + name + " accelerate more" + 5 + "km/s and current speed " + Accelerate)
