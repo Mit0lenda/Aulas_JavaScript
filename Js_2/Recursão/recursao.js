@@ -35,3 +35,14 @@ function fatorial(num){
 console.log("\n!5 = " + fatorial(5))
 console.log("\n!0 = " + fatorial(0))
 console.log("\n!9 = " + fatorial(9))
+
+function divisao(num){
+    console.log(num)
+    if(num % 2 === 0){
+        return divisao(num / 2)
+    } else {
+        return num
+    }
+}
+console.log("\n" + divisao(256));
+

@@ -34,6 +34,15 @@ function addContact (){
     ul.appendChild(addressLi)
     ul.appendChild(document.createElement('br'))
 
+    const emailli = document.createElement('li')
+    emailli.innerText = "Email: "
+    const emailInput = document.createElement('input')
+    emailInput.type = 'email'
+    emailInput.name = 'email'
+    emailli.appendChild(emailInput)
+    ul.appendChild(emailli)
+    ul.appendChild(document.createElement('br'))
+
     contactSection.append(h3, ul)
 }
 function removeContact(){

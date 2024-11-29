@@ -38,3 +38,18 @@ const oiMundo = function (){
     console.log("Oi,mundo!")
 }
 oiMundo()
+
+function somador(a,b){
+    return a + b;
+}
+const resultado = somador;
+console.log(resultado(4,3));
+
+const calcula = {}
+calcula.somador = somar;
+calcula.subtrair = subtrair;
+calcula.multiplicar = function(a,b){
+    return a * b;
+}
+
+console.log(calcula.somador(5,5));

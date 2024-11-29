@@ -45,8 +45,37 @@ function ola(){
 //Apenas variáveis declaradas com var são carregadas
 //sempre no começo do código, acima de todo o resto
 console.log(nome)
-console.log(sobrenome)
+//console.log(sobrenome)
 var nome = "Nicollas"
 let sobrenome = "Freitas"
 console.log(nome)
-confirm.log(sobrenome6546)
+//confirm.log(sobrenome)
+
+let digimon = "Agumon";
+
+function digevoluir(){
+    let digimon = "Greymon"
+    console.log(digimon)
+}
+
+console.log(digimon);
+digevoluir();
+
+function newAnimal(){
+    let animal = "Cachorro";
+}
+//console.log(animal); //Gera erro
+
+function vernota(nota){
+    let situacao = "";
+    if(nota >= 6){
+        situacao = "Aprovado";
+       
+    } else{
+        situacao = "Reprovado";
+        
+    }
+    console.log(situacao);
+        console.log(nota);
+}
+vernota(7);

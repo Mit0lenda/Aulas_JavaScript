@@ -35,4 +35,20 @@ for(let i = 0; i < matriz.length;i++)
         const elemento = matriz [i][j]
         console.log("Posição: (" + i + ", " + j + ")Valor: "+ elemento)
     }
+} 
+const matrizArray = [
+  ["arroz", "feijão", "batata"],
+  ["carne", "frango", "peixe"],
+  ["macarrão", "lasanha", "pizza"],
+  []
+];
+
+console.log(matrizArray[0]);
+console.log(matrizArray[0][2]);
+console.log(matrizArray);
+console.table(matrizArray);
+for( let i = 0;i < matrizArray.length;i++){
+  for(let j; j < matrizArray[i].length;j++){
+    console.log(matrizArray[i][j]);
+  }
 }

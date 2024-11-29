@@ -7,3 +7,11 @@ let pessoa = {
 }
 console.log(pessoa)
 pessoa.dizerOla()
+let idade = {
+    idade: 21,
+    dizerIdade(){
+        console.log("Minha idade é " + this.idade);
+    }
+}
+console.log(idade)
+idade.dizerIdade()
